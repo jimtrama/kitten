@@ -1,0 +1,51 @@
+:root {
+  // Colors
+  --bg-color: #EFF1F4;
+  --white:#ffffff;
+  --black: #000000;
+  --dark-grey:#555555;
+  --grey:#A0A9BA;
+  --light-grey:#D8D8D8;
+  --primary-color:#fe7ffe;
+  // --primary-color:#b36dfa;
+  --alert-color:#c13053;
+
+  //Other
+  --general-radius: 17px;
+}
+
+@font-face {
+  font-family: mainFont;
+  src: url(./../public/assets/fonts/manrope/main/Manrope-VariableFont_wght.ttf);
+}
+
+
+* {
+  font-family: mainFont;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 40px;
+  color: var(--black);
+}
+
+p{
+  font-size: 18px;
+  color: var(--black);
+}
+
+.center-abs {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,4 @@
+<button #theBtn [style]="style" [disabled]="loading" (click)="onClick($event)" >
+    <ng-content *ngIf="!loading" ></ng-content>
+    <ng-container *ngIf="loading" >loading</ng-container>
+</button>
