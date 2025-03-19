@@ -1,0 +1,45 @@
+app-input {
+  width: fit-content;
+  display: flex;
+}
+.top {
+  flex-direction: column;
+  gap: 8px;
+}
+.left {
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 52px;
+  row-gap: 8px;
+  flex-wrap: wrap;
+}
+span {
+  font-size: 14px;
+  flex: 0.25;
+  min-width: fit-content;
+  min-height: fit-content;
+}
+textarea{resize: none;}
+input,textarea {
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  padding: 9px 18px;
+  color: var(--grey);
+  font-size: 16px;
+  min-width: 172px;
+  flex: 0.75;
+}
+input,textarea:focus {
+  outline: none;
+}
+.first-stage-input {
+  max-width: 172px;
+}
+.first-stage-input {
+  max-width: 172px;
+}
+.third-stage-input {
+  width: calc(100% - 38px);
+  padding-bottom: 100px;
+}

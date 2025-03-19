@@ -27,7 +27,6 @@
   overflow: hidden;
 }
 
-
 h1 {
   font-size: 40px;
   color: var(--black);
@@ -36,6 +35,7 @@ h1 {
 p{
   font-size: 18px;
   color: var(--black);
+  font-weight: bold;
 }
 
 .center-abs {
@@ -47,5 +47,8 @@ p{
 .col{
   display: flex;
   flex-direction: column;
+}
+.row{
+  display: flex;
 }
 

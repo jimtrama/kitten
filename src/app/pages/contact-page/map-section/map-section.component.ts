@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './map-section.component.scss'
 })
 export class MapSectionComponent {
+  options = {
+    mapId: "",
+    center: { lat: 40.628871, lng: 22.945174 },
+    zoom: 4,
+  };
+  center = { lat: 40, lng: 22 }
   constructor(){
     
   }

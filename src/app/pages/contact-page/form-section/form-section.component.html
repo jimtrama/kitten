@@ -1,6 +1,69 @@
 <h1>Contact us</h1>
-<p>We are all cat persons, so if you got any question, drop it below and we will contact you back!</p>
+<p style="margin-top: 24px">
+  We are all cat persons, so if you got any question, drop it below and we will
+  contact you back!
+</p>
 <div class="first-section col">
-    <app-input placeholder="Type your name" label="Your FullName"></app-input>
-    <app-input placeholder="Type your email" label="Your Email"></app-input>
+  <app-input
+    style="width: 100%"
+    placeholder="Type your name"
+    label="Your FullName"
+    labelPlacement="left"
+  ></app-input>
+  <app-input
+    style="width: 100%"
+    placeholder="Type your email"
+    label="Your Email"
+    labelPlacement="left"
+  ></app-input>
+</div>
+<div class="second-section col">
+  <div class="first-stage row">
+    <app-input
+      customInputCssClass="first-stage-input"
+      placeholder="ex. Thessaloniki"
+      label="City"
+    ></app-input>
+    <app-input
+      customInputCssClass="first-stage-input"
+      placeholder="ex. 54658"
+      label="Postal Code"
+    ></app-input>
+  </div>
+  <div class="row" style="margin-top: 32px">
+    <app-input
+      style="flex: 0.66"
+      customInputCssClass="second-stage-input"
+      placeholder="ex. Thessaloniki"
+      label="Address"
+    ></app-input>
+  </div>
+  <div class="row" style="margin-top: 36px">
+    <app-input
+      customInputCssClass="third-stage-input"
+      style="width: 100%"
+      placeholder="Type your message"
+      label="Your Message"
+      [isMulty]="true"
+      [optional]="true"
+    ></app-input>
+  </div>
+  <div
+    class="row"
+    style="
+      margin-top: 26px;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+    "
+  >
+    <label class="container">
+      <input type="checkbox" class="container-input" />
+      <span class="checkmark"></span>
+    </label>
+    <span>I agree with the Terms & Conditions</span>
+  </div>
+  <div class="row" style="margin-top: 46px; margin-bottom: 187px">
+    <button>Send!</button>
+  </div>
 </div>

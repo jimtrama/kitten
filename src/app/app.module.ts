@@ -3,7 +3,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { GoogleMapsModule } from '@angular/google-maps';
 import { AppComponent } from './app.component';
 
 
@@ -42,6 +42,7 @@ import { MapSectionComponent } from './pages/contact-page/map-section/map-sectio
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
+    GoogleMapsModule,
     NgOptimizedImage
   ],
   providers: [

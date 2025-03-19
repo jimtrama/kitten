@@ -1,2 +1,6 @@
-<span>{{label}}</span>
-<input [id]="uid" [type]="type" [placeholder]="placeholder">
+<div style="width: 100%;display: flex;justify-content: space-between;">
+    <span>{{label}}</span>
+    <span *ngIf="optional" style="text-align: end;color: #9784FF;font-size: 14px;">Optional</span>
+</div>
+<input *ngIf="!isMulty" [class]="customInputCssClass" [id]="uid" [type]="type" [placeholder]="placeholder" >
+<textarea *ngIf="isMulty" [class]="customInputCssClass" [id]="uid" [placeholder]="placeholder"></textarea>
