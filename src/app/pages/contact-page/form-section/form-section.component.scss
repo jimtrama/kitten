@@ -21,20 +21,37 @@
 .first-stage-input-wrapper{
   width: fit-content;
 }
-@media only screen and (max-width: 400px) {
-  .first-stage-input-wrapper{
-    width: 100%;
-  }
-}
 .second-stage-input-wrapper{
   flex: 0.66;
 }
-@media only screen and (max-width: 400px) {
+.third-spacing{
+  margin-top: 32px;
+}
+.fourth-spacing{
+  margin-top: 36px;
+}
+@media only screen and (max-width: 500px) {
+  .first-stage-input-wrapper{
+    width: 100%;
+  }
   .second-stage-input-wrapper{
     flex: 1;
   }
+  .third-spacing{
+    margin-top: 15px;
+  }
 }
-
+@media only screen and  (max-width: 1240px) and (min-width: 1000px) {
+  .first-stage-input-wrapper{
+    width: 100%;
+  }
+  .second-stage-input-wrapper{
+    flex: 1;
+  }
+  .third-spacing{
+    margin-top: 15px;
+  }
+}
 
 .send-btn{
   background-color: #EF7878;
@@ -53,9 +70,9 @@
   :host {
       padding-left: 0px;
       padding-right: 0px;
-      padding-top: 10px;
-      margin-left: 20px;
-      margin-right: 20px;
+      padding-top: 30px;
+      margin-left: 25px;
+      margin-right: 25px;
   }
   p{
     font-size:16px ;
@@ -97,8 +114,6 @@
   border-radius: 5px;
   transition: all 0.2s;
 }
-
-
 
 
 /* On mouse-over, add a grey background color */

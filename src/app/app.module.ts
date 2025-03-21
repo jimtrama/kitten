@@ -5,7 +5,7 @@ import { IMAGE_CONFIG, NgOptimizedImage } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AppComponent } from './app.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -41,6 +41,7 @@ import { MapSectionComponent } from './pages/contact-page/map-section/map-sectio
   ],
   imports: [
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     GoogleMapsModule,
     NgOptimizedImage

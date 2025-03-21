@@ -1,72 +1,94 @@
-<h1>Contact us</h1>
-<p style="margin-top: 24px">
-  We are all cat persons, so if you got any question, drop it below and we will
-  contact you back!
-</p>
-<div class="first-section col">
-  <app-input
-    style="width: 100%"
-    placeholder="Type your name"
-    label="Your FullName"
-    labelPlacement="left"
-  ></app-input>
-  <app-input
-    style="width: 100%"
-    placeholder="Type your email"
-    label="Your Email"
-    labelPlacement="left"
-  ></app-input>
-</div>
-<div class="second-section col">
-  <div class="first-stage row">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h1>Contact us</h1>
+  <p style="margin-top: 24px">
+    We are all cat persons, so if you got any question, drop it below and we
+    will contact you back!
+  </p>
+  <div class="first-section col">
     <app-input
-    class="first-stage-input-wrapper"
-      customInputCssClass="first-stage-input"
-      placeholder="ex. Thessaloniki"
-      label="City"
-    ></app-input>
-    <app-input
-    class="first-stage-input-wrapper"
-      customInputCssClass="first-stage-input"
-      placeholder="ex. 54658"
-      label="Postal Code"
-    ></app-input>
-  </div>
-  <div class="row" style="margin-top: 32px">
-    <app-input
-      class="second-stage-input-wrapper"
-      customInputCssClass="second-stage-input"
-      placeholder="ex. Thessaloniki"
-      label="Address"
-    ></app-input>
-  </div>
-  <div class="row" style="margin-top: 36px">
-    <app-input
-      customInputCssClass="third-stage-input"
+      uid="full_name"
       style="width: 100%"
-      placeholder="Type your message"
-      label="Your Message"
-      [isMulty]="true"
-      [optional]="true"
+      placeholder="Type your name"
+      label="Your FullName"
+      labelPlacement="left"
+      [form]="contactForm"
+      [customInputCssClass]="(!getInput('full_name')?.valid && getInput('full_name')?.touched) ? 'error':''"
+    ></app-input>
+    <app-input
+      uid="email"
+      style="width: 100%"
+      placeholder="Type your email"
+      label="Your Email"
+      labelPlacement="left"
+      [form]="contactForm"
+      [customInputCssClass]="(!getInput('email')?.valid && getInput('email')?.touched) ? 'error':''"
     ></app-input>
   </div>
-  <div
-    class="row"
-    style="
-      margin-top: 26px;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 16px;
-      min-width: fit-content;
-    "
-  >
-    <label class="container">
-      <input type="checkbox" class="container-input" />
-      <span class="checkmark"></span>
-    </label>
-    <span style="font-weight: normal;width: fit-content;">I agree with the Terms & Conditions</span>
+  <div class="second-section col">
+    <div class="first-stage row">
+      <app-input
+      uid="city"
+        class="first-stage-input-wrapper"
+        customInputCssClass="first-stage-input"
+        placeholder="ex. Thessaloniki"
+        label="City"
+        [form]="contactForm"
+        [customInputCssClass]="(!getInput('city')?.valid && getInput('city')?.touched) ? 'error':''"
+      ></app-input>
+      <app-input
+      type="number"
+      uid="postal_code"
+        class="first-stage-input-wrapper"
+        customInputCssClass="first-stage-input"
+        placeholder="ex. 54658"
+        label="Postal Code"
+        [form]="contactForm"
+        [customInputCssClass]="(!getInput('postal_code')?.valid && getInput('postal_code')?.touched) ? 'error':''"
+      ></app-input>
+    </div>
+    <div class="row" class="third-spacing">
+      <app-input
+      uid="address"
+        class="second-stage-input-wrapper"
+        customInputCssClass="second-stage-input"
+        placeholder="ex. Thessaloniki"
+        label="Address"
+        [form]="contactForm"
+        [customInputCssClass]="(!getInput('address')?.valid && getInput('address')?.touched) ? 'error':''"
+      ></app-input>
+    </div>
+    <div class="row" class="fourth-spacing">
+      <app-input
+      uid="message"
+        customInputCssClass="third-stage-input"
+        style="width: 100%"
+        placeholder="Type your message"
+        label="Your Message"
+        [isMulty]="true"
+        [optional]="true"
+        [form]="contactForm"
+      ></app-input>
+    </div>
+    <div
+      class="row"
+      style="
+        margin-top: 26px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+        min-width: fit-content;
+      "
+    >
+      <label class="container">
+        <input type="checkbox" id="checkbox" class="container-input" />
+        <span class="checkmark"></span>
+      </label>
+      <span style="font-weight: normal; width: fit-content"
+        >I agree with the Terms & Conditions</span
+      >
+    </div>
+    <div class="row" style="margin-top: 46px">
+      <button type="submit" class="send-btn">{{loading?'sending...':'Sent!'}}</button>
+    </div>
   </div>
-  <div class="row" style="margin-top: 46px;">
-    <button  (click)="sendEmail()" class="send-btn">Send!</button>
-  </div>
-</div>
+</form>

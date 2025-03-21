@@ -1,6 +1,8 @@
+<ng-container [formGroup]="form">
 <div style="display: flex;justify-content: space-between;min-width: fit-content;">
     <span class="label" >{{label}}</span>
     <span *ngIf="optional" style="text-align: end;color: #9784FF;font-size: 14px;">Optional</span>
 </div>
-<input *ngIf="!isMulty" [class]="customInputCssClass" [id]="uid" [type]="type" [placeholder]="placeholder">
-<textarea *ngIf="isMulty" [class]="customInputCssClass" [id]="uid" [placeholder]="placeholder"></textarea>
+<input *ngIf="!isMulty" [class]="customInputCssClass"  [formControlName]="uid" [type]="type" [placeholder]="placeholder">
+<textarea *ngIf="isMulty" [class]="customInputCssClass" [formControlName]="uid"  [placeholder]="placeholder"></textarea>
+</ng-container>

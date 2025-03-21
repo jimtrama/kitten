@@ -16,7 +16,7 @@ app-input {
 .label {
   font-size: 14px;
   font-weight: bold;
-  min-width: 91px;
+  min-width: 100px;
   min-height: fit-content;
 }
 textarea{resize: none;}
@@ -29,6 +29,7 @@ input,textarea {
   font-size: 16px;
   min-width: 136px;
   flex: 1;
+  transition: border 0.5s;
 }
 input,textarea:focus {
   outline: none;
@@ -36,12 +37,10 @@ input,textarea:focus {
 .first-stage-input {
   max-width: 136px;
 }
-@media only screen and (max-width: 400px) {
-  .first-stage-input {
-    max-width: 100%;
-  }
-}
 .third-stage-input {
   width: calc(100% - 38px);
   padding-bottom: 100px;
+}
+.error{
+  border: 1px solid #EF7878;
 }

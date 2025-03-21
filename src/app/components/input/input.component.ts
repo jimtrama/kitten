@@ -1,7 +1,8 @@
 import { Component, ElementRef, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 
-type InputType = 'text' | 'password' | 'email'
+type InputType = 'text' | 'password' | 'number';
 
 @Component({
   selector: 'app-input',
@@ -19,6 +20,7 @@ export class InputComponent implements OnInit {
   @Input() optional:boolean = false;
   @Input() labelPlacement:'top'|'left' = "top";
   @Input({required:true}) placeholder:string = "";
+  @Input({required:true})form:FormGroup = new FormGroup([]);
   @Input({required:true}) label:string = "";
   
   constructor(private el:ElementRef){
