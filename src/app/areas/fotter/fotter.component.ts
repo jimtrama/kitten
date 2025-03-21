@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-fotter',
   standalone: false,
   templateUrl: './fotter.component.html',
-  styleUrl: './fotter.component.scss'
+  styleUrl: './fotter.component.css'
 })
 export class FotterComponent {
 

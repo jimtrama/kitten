@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-to-be-added-page',
   standalone: false,
   templateUrl: './to-be-added-page.component.html',
-  styleUrl: './to-be-added-page.component.scss',
+  styleUrl: './to-be-added-page.component.css',
 })
 export class ToBeAddedPageComponent implements OnInit, OnDestroy {
   title: string = '';

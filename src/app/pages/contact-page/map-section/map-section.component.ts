@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-map-section',
   standalone: false,
   templateUrl: './map-section.component.html',
-  styleUrl: './map-section.component.scss'
+  styleUrl: './map-section.component.css'
 })
 export class MapSectionComponent {
   options = {

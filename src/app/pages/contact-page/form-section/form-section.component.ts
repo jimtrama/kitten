@@ -19,7 +19,7 @@ type InputName =
   selector: 'app-form-section',
   standalone: false,
   templateUrl: './form-section.component.html',
-  styleUrl: './form-section.component.scss',
+  styleUrl: './form-section.component.css',
 })
 export class FormSectionComponent implements OnDestroy {
   contactForm: FormGroup;

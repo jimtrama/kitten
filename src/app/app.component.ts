@@ -6,7 +6,7 @@ import { ChildrenOutletContexts } from '@angular/router';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.css',
   animations: [
     slideInAnimation
   ]

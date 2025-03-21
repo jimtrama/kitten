@@ -7,7 +7,7 @@ import { DeviceInfoService } from '../../services/device-info.service';
   selector: 'app-header',
   standalone: false,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   isMobile: boolean = false;

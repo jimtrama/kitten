@@ -3,7 +3,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, 
   selector: 'app-button',
   standalone: false,
   templateUrl: './button.component.html',
-  styleUrl: './button.component.scss',
+  styleUrl: './button.component.css',
   encapsulation:ViewEncapsulation.ShadowDom
 })
 export class ButtonComponent implements OnInit {
