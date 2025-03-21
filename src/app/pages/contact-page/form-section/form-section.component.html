@@ -57,15 +57,16 @@
       justify-content: flex-start;
       align-items: center;
       gap: 16px;
+      min-width: fit-content;
     "
   >
     <label class="container">
       <input type="checkbox" class="container-input" />
       <span class="checkmark"></span>
     </label>
-    <span style="font-weight: normal;">I agree with the Terms & Conditions</span>
+    <span style="font-weight: normal;width: fit-content;">I agree with the Terms & Conditions</span>
   </div>
   <div class="row" style="margin-top: 46px;">
-    <button>Send!</button>
+    <button  (click)="sendEmail()" class="send-btn">Send!</button>
   </div>
 </div>
