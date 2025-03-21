@@ -8,6 +8,11 @@ export type URL_ROUTE = 'adopt'|'stories'|'about'|'blog'|'contact';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo:'contact',
+    pathMatch:'full'
+  },
+  {
     path: 'contact',
     component: ContactPageComponent,
     title:"Contact",
