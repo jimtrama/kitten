@@ -1,5 +1,5 @@
 app-input {
-  width: fit-content;
+  width: 100%;
   display: flex;
 }
 .top {
@@ -8,15 +8,15 @@ app-input {
 }
 .left {
   align-items: center;
-  justify-content: space-between;
-  column-gap: 52px;
+  justify-content: flex-start;
+  column-gap: 24px;
   row-gap: 8px;
   flex-wrap: wrap;
 }
-span {
+.label {
   font-size: 14px;
-  flex: 0.25;
-  min-width: fit-content;
+  font-weight: bold;
+  min-width: 91px;
   min-height: fit-content;
 }
 textarea{resize: none;}
@@ -27,17 +27,19 @@ input,textarea {
   padding: 9px 18px;
   color: var(--grey);
   font-size: 16px;
-  min-width: 172px;
-  flex: 0.75;
+  min-width: 136px;
+  flex: 1;
 }
 input,textarea:focus {
   outline: none;
 }
 .first-stage-input {
-  max-width: 172px;
+  max-width: 136px;
 }
-.first-stage-input {
-  max-width: 172px;
+@media only screen and (max-width: 400px) {
+  .first-stage-input {
+    max-width: 100%;
+  }
 }
 .third-stage-input {
   width: calc(100% - 38px);

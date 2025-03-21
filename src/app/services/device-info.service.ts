@@ -16,4 +16,7 @@ export class DeviceInfoService {
       'iPod'
     ].includes(navigator.platform)
   }
+  static isMobile():boolean {
+    return window.innerWidth < 600;
+  }
 }

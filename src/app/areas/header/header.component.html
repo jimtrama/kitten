@@ -1,8 +1,11 @@
 <img ngSrc="assets/images/logo.png" height="30" width="123" >
-<div>
-    <button (click)="navigate('adopt')" >Adopt Kittens</button>
-    <button (click)="navigate('stories')" >Kitty Stories</button>
-    <button (click)="navigate('about')" >About us</button>
-    <button (click)="navigate('blog')" >Blog</button>
-    <button (click)="navigate('contact')" >Contact</button>
+<a #toggleBtn class="toggle-btn" *ngIf="isMobile" (click)="toggleMenu()" >
+    <img ngSrc="assets/icons/menu.png" width="30" height="30" >
+</a>
+<div [ngClass]="{'mobile':isMobile}" [ngStyle]="{'right':showMenu?'3px':'-200px'}" >
+    <button class="link" (click)="navigate('adopt')" >Adopt Kittens</button>
+    <button class="link" (click)="navigate('stories')" >Kitty Stories</button>
+    <button class="link" (click)="navigate('about')" >About us</button>
+    <button class="link" (click)="navigate('blog')" >Blog</button>
+    <button class="link" (click)="navigate('contact')" >Contact</button>
 </div>

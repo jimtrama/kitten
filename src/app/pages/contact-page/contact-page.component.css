@@ -12,14 +12,15 @@
   width: fit-content;
   height: fit-content;
   max-width: 476px;
-  min-width: 376px;
+  min-height: fit-content;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   :host {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
   }
 }

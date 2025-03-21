@@ -1,6 +1,7 @@
 :host{
     background-color: var(--white);
-    min-height: 48px;
+    min-height: 47px;
+    max-height: 47px;
     width: calc(100% - 237px);
     display: flex;
     align-items: center;
@@ -9,15 +10,68 @@
     padding-left: 120px;
     padding-right: 117px;
 }
-
+@media only screen and (max-width: 930px) {
+    :host {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: calc(100% - 20px);
+    }
+    img{
+        height: 20px;
+        width: auto;
+    }
+    div{
+        gap: 30px !important;
+    }
+  }
 div{
     display: flex;
     gap: 60px;
 }
 
-button{
+.toggle-btn{
+    border: none;
+    cursor: pointer;
+}
+.toggle-btn:active{
+   animation-name: myblink;
+   animation-duration: 0.1s;
+   animation-timing-function: ease-in-out;
+    background: transparent;
+}
+@keyframes myblink {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.link{
     color: var(--dark-grey);
     font-size: 14px;
     cursor: pointer;
     border: none;
+    transition: all 0.2s;
+}
+
+.link:hover{
+    scale: 1.02;
+}
+
+.mobile{
+    position: absolute;
+    top: 50px;
+    right: 3px;
+    flex-direction: column;
+    width: fit-content;
+    z-index: 2;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    transition: all 1s;
 }

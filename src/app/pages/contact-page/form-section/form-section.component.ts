@@ -8,5 +8,7 @@ import { ContactFormService } from '../../../services/contact-form.service';
   styleUrl: './form-section.component.scss',
 })
 export class FormSectionComponent {
-  constructor(private contactFormService: ContactFormService) {}
+  constructor(private contactFormService: ContactFormService) {
+
+  }
 }

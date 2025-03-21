@@ -1,6 +1,6 @@
-<div style="width: 100%;display: flex;justify-content: space-between;">
-    <span>{{label}}</span>
+<div style="display: flex;justify-content: space-between;min-width: fit-content;">
+    <span class="label" >{{label}}</span>
     <span *ngIf="optional" style="text-align: end;color: #9784FF;font-size: 14px;">Optional</span>
 </div>
-<input *ngIf="!isMulty" [class]="customInputCssClass" [id]="uid" [type]="type" [placeholder]="placeholder" >
+<input *ngIf="!isMulty" [class]="customInputCssClass" [id]="uid" [type]="type" [placeholder]="placeholder">
 <textarea *ngIf="isMulty" [class]="customInputCssClass" [id]="uid" [placeholder]="placeholder"></textarea>

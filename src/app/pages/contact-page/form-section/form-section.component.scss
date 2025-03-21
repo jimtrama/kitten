@@ -13,6 +13,26 @@
 
 .first-stage{
   justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 10px;
+}
+.first-stage-input-wrapper{
+  width: fit-content;
+}
+@media only screen and (max-width: 400px) {
+  .first-stage-input-wrapper{
+    width: 100%;
+  }
+}
+.second-stage-input-wrapper{
+  flex: 0.66;
+}
+@media only screen and (max-width: 400px) {
+  .second-stage-input-wrapper{
+    flex: 1;
+  }
 }
 
 
@@ -28,10 +48,18 @@ button{
   border: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   :host {
       padding-left: 0px;
       padding-right: 0px;
+      padding-top: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  p{
+    font-size:16px ;
+    margin-top: 14px !important;
+    width: 100%;
   }
 }
 
