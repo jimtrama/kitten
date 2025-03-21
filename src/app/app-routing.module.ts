@@ -4,7 +4,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { ToBeAddedPageComponent } from './pages/to-be-added-page/to-be-added-page.component';
 
-
+export type URL_ROUTE = 'adopt'|'stories'|'about'|'blog'|'contact';
 
 const routes: Routes = [
   {
@@ -14,10 +14,31 @@ const routes: Routes = [
     data: { animation: 'ContactPage' }
   },
   {
-    path: 'see',
+    path: 'adopt',
     component: ToBeAddedPageComponent,
-    data: { animation: 'ToBeAddedPage' },
-    title:"Home",
+    data: { animation: 'ToBeAddedPage', title:'Abopt a kitten '},
+    title:"To Be Added",
+    
+  },
+  {
+    path: 'stories',
+    component: ToBeAddedPageComponent,
+    data: { animation: 'ToBeAddedPage', title:'Stories '},
+    title:"To Be Added",
+    
+  },
+  {
+    path: 'about',
+    component: ToBeAddedPageComponent,
+    data: { animation: 'ToBeAddedPage', title:'About us '},
+    title:"To Be Added",
+    
+  },
+  {
+    path: 'blog',
+    component: ToBeAddedPageComponent,
+    data: { animation: 'ToBeAddedPage', title:'Blog  '},
+    title:"To Be Added",
     
   },
   {

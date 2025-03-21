@@ -1,6 +1,6 @@
 :host {
   width: 100vw;
-  height: fit-content;
+  min-height: fit-content;
   display: flex;
   background-color: var(--bg-color);
   justify-content: space-between;

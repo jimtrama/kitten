@@ -2,15 +2,18 @@
     background: var(--bg-color);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
 }
 
 .content-wrapper{
     background: var(--bg-color);
-    height: fit-content;
+    height: 100%;
     width: 100vw;
     overflow-y: scroll;
     position: relative;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
 }

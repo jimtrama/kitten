@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-type Page = 'vehicles' | 'wash' | 'shop' | 'music' | 'account' | 'login';
+import { URL_ROUTE } from '../app-routing.module';
 @Injectable({
   providedIn: 'root'
 })
@@ -18,39 +18,34 @@ export class CustomRoutingService {
 
   }
 
-  goTo(page:Page){
+  goTo(page:URL_ROUTE){
 
-    if(page === "vehicles"){
-      this.vehicles();
-    }else if(page === "wash"){
-      this.wash();
-    }else if(page === "shop"){
-      this.shop();
-    }else if(page === "music"){
-      this.music();
-    }else if(page === "account"){
-      this.account();
-    }else if(page === "login"){
-      this.login();
+    if(page === "adopt"){
+      this.adopt();
+    }else if(page === "stories"){
+      this.stories();
+    }else if(page === "about"){
+      this.about();
+    }else if(page === "blog"){
+      this.blog();
+    }else if(page === "contact"){
+      this.contact();
     }
   }
 
-  private vehicles(){
-    this.router.navigate(["home","v"]);
+  private adopt(){
+    this.router.navigate(["adopt"]);
   }
-  private wash(){
-    this.router.navigate(["home","w"]);
+  private stories(){
+    this.router.navigate(["stories"]);
   }
-  private shop(){
-    this.router.navigate(["home","s"]);
+  private about(){
+    this.router.navigate(["about"]);
   }
-  private account(){
-    this.router.navigate(["home","a"]);
+  private blog(){
+    this.router.navigate(["blog"]);
   }
-  private music(){
-    this.router.navigate(["home","m"]);
-  }
-  private login(){
-    this.router.navigate(["login"])
+  private contact(){
+    this.router.navigate(["contact"]);
   }
 }

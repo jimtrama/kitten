@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CustomRoutingService } from '../../services/custom-routing.service';
 @Component({
   selector: 'app-contact-page',
   standalone: false,
@@ -10,12 +9,8 @@ export class ContactPageComponent {
 
   
 
-  constructor(private router:CustomRoutingService){
+  constructor(){
     
   }
 
-  account(){
-    this.router.goTo("account");
-   
-  }
 }
