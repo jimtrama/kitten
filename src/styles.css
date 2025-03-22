@@ -16,7 +16,7 @@
 .map-container{
   border-radius: 13px;
 }
-
+html, body { overflow: hidden}
 * {
   font-family: mainFont;
   margin: 0;

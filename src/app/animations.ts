@@ -39,7 +39,7 @@ export const slideInAnimation = trigger('routeAnimations', [
     group([
       query(
         ':leave',
-        [animate(`${time}ms ease-out`, style({ left: '100%' }))],
+        [animate(`${time}ms ease-out`, style({ left: '-100%' }))],
         { optional: true }
       ),
       query(':enter', [animate(`${time}ms ease-out`, style({ left: '0%' }))], {

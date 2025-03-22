@@ -5,4 +5,5 @@
 </div>
 <input *ngIf="!isMulty" [class]="customInputCssClass"  [formControlName]="uid" [type]="type" [placeholder]="placeholder">
 <textarea *ngIf="isMulty" [class]="customInputCssClass" [formControlName]="uid"  [placeholder]="placeholder"></textarea>
+<ng-content></ng-content>
 </ng-container>

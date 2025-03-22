@@ -13,7 +13,9 @@
       labelPlacement="left"
       [form]="contactForm"
       [customInputCssClass]="(!getInput('full_name')?.valid && getInput('full_name')?.touched) ? 'error':''"
-    ></app-input>
+    >
+    <span class="error-label" *ngIf="getInput('full_name')?.hasError('required') && getInput('full_name')?.touched">required</span>
+  </app-input>
     <app-input
       uid="email"
       style="width: 100%"
@@ -22,7 +24,10 @@
       labelPlacement="left"
       [form]="contactForm"
       [customInputCssClass]="(!getInput('email')?.valid && getInput('email')?.touched) ? 'error':''"
-    ></app-input>
+      >
+      <span class="error-label" *ngIf="getInput('email')?.hasError('required') && getInput('email')?.touched">required</span>
+      <span class="error-label" *ngIf="getInput('email')?.hasError('email') && getInput('email')?.touched">not a valid email</span>
+    </app-input>
   </div>
   <div class="second-section col">
     <div class="first-stage row">
@@ -34,7 +39,9 @@
         label="City"
         [form]="contactForm"
         [customInputCssClass]="(!getInput('city')?.valid && getInput('city')?.touched) ? 'error':''"
-      ></app-input>
+      >
+      <span class="error-label" *ngIf="getInput('city')?.hasError('required') && getInput('city')?.touched">required</span>
+    </app-input>
       <app-input
       type="number"
       uid="postal_code"
@@ -44,7 +51,10 @@
         label="Postal Code"
         [form]="contactForm"
         [customInputCssClass]="(!getInput('postal_code')?.valid && getInput('postal_code')?.touched) ? 'error':''"
-      ></app-input>
+      >
+      <span class="error-label" *ngIf="getInput('postal_code')?.hasError('required') && getInput('postal_code')?.touched">required</span>
+      <span class="error-label" *ngIf="getInput('postal_code')?.hasError('post') && getInput('postal_code')?.touched">invalide code</span>
+    </app-input>
     </div>
     <div class="row" class="third-spacing">
       <app-input
@@ -55,7 +65,10 @@
         label="Address"
         [form]="contactForm"
         [customInputCssClass]="(!getInput('address')?.valid && getInput('address')?.touched) ? 'error':''"
-      ></app-input>
+      >
+      <span class="error-label" *ngIf="getInput('address')?.hasError('required') && getInput('address')?.touched">required</span>
+    </app-input>
+      <span *ngIf="getInput('address')?.hasError('requiered')">required</span>
     </div>
     <div class="row" class="fourth-spacing">
       <app-input
@@ -83,12 +96,16 @@
         <input type="checkbox" id="checkbox" class="container-input" />
         <span class="checkmark"></span>
       </label>
-      <span style="font-weight: normal; width: fit-content"
+      <span style="font-weight: 100; width: fit-content"
         >I agree with the Terms & Conditions</span
       >
     </div>
-    <div class="row" style="margin-top: 46px">
-      <button type="submit" class="send-btn">{{loading?'sending...':'Sent!'}}</button>
+    <div class="row" style="margin-top: 46px;position: relative;">
+      <span class="general-error-msg" *ngIf="error != ''">{{error}}</span>
+      <button [disabled]="loading" type="submit" class="send-btn">
+        {{loading?'sending...':'Sent!'}}
+        <span *ngIf="loading" class="loader"></span>
+      </button>
     </div>
   </div>
 </form>

@@ -53,6 +53,7 @@ div{
 .link{
     color: var(--dark-grey);
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     transition: all 0.2s;
@@ -66,7 +67,7 @@ div{
 .mobile{
     position: absolute;
     top: 50px;
-    right: 3px;
+    right: 22px;
     flex-direction: column;
     width: fit-content;
     z-index: 2;
@@ -74,5 +75,5 @@ div{
     padding: 10px;
     border: 1px solid var(--grey);
     border-radius: 10px;
-    transition: all 1s;
+    transition: right 1s;
 }

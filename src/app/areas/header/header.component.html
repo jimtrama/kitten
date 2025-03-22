@@ -2,7 +2,7 @@
 <a #toggleBtn class="toggle-btn" *ngIf="isMobile" (click)="toggleMenu()" >
     <img ngSrc="assets/icons/menu.png" width="30" height="30" >
 </a>
-<div [ngClass]="{'mobile':isMobile}" [ngStyle]="{'right':showMenu?'3px':'-200px'}" >
+<div [ngClass]="{'mobile':isMobile}" [ngStyle]="{'right':showMenu?'10px':'-200px','display':showMenu||!isMobile?'flex':'none'}" >
     <button class="link" (click)="navigate('adopt')" >Adopt Kittens</button>
     <button class="link" (click)="navigate('stories')" >Kitty Stories</button>
     <button class="link" (click)="navigate('about')" >About us</button>

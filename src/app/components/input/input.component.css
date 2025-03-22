@@ -1,6 +1,7 @@
 app-input {
   width: 100%;
   display: flex;
+  position: relative;
 }
 .top {
   flex-direction: column;
@@ -43,4 +44,14 @@ input,textarea:focus {
 }
 .error{
   border: 1px solid #EF7878;
+}
+
+.error-label{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-30%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #EF7878;
 }

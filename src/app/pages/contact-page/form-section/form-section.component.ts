@@ -59,19 +59,24 @@ export class FormSectionComponent implements OnDestroy {
 
 
   onSubmit() {
-    
+    console.log(this.contactForm);
+    if (!this.contactForm.valid) {
+      this.error = 'Invalid form. Please fix the errors and re-try 😊';
+      this.contactForm.markAllAsTouched();
+      console.log(this.error);
+      console.log(
+       this.getInput('email')?.hasError('email')
+      );
+      return;
+    }
+
     if (!(<HTMLInputElement>document.getElementById("checkbox")).checked) {
-      this.error = 'Please accept Terms & Conditions';
+      this.error = 'Please accept Terms & Conditions ✅';
       console.log(this.error);
       return;
     }
 
-    if (!this.contactForm.valid) {
-      this.error = 'Invalid Form. Please fix errors and re-try';
-      this.contactForm.markAllAsTouched();
-      console.log(this.error);
-      return;
-    }
+    
     this.loading = true;
     this.error = '';
     let name = this.getInput('full_name')?.value.trim();
@@ -90,7 +95,7 @@ export class FormSectionComponent implements OnDestroy {
       const matches = control.value.match(
         /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
       );
-      return matches ? of(null) : of({ invalidEmail: true });
+      return matches ? of(null) : of({ email: true });
     } else {
       return of(null);
     }
@@ -99,6 +104,6 @@ export class FormSectionComponent implements OnDestroy {
   postalValidator(control: AbstractControl): any {
     return control.value.length == 5
       ? of(null)
-      : of({ 'invalid postal': true });
+      : of({ post: true });
   }
 }
