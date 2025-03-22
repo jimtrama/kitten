@@ -102,7 +102,7 @@
     </div>
     <div class="row" style="margin-top: 46px;position: relative;">
       <span class="general-error-msg" *ngIf="error != ''">{{error}}</span>
-      <button [disabled]="loading" type="submit" class="send-btn">
+      <button #submitBtn [disabled]="loading" type="submit" class="send-btn">
         {{loading?'sending...':'Sent!'}}
         <span *ngIf="loading" class="loader"></span>
       </button>

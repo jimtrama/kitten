@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { ContactFormService } from '../../../services/contact-form.service';
 import {
   AbstractControl,
@@ -26,6 +26,8 @@ export class FormSectionComponent implements OnDestroy {
   error: string = '';
   loading = false;
   sub:Subscription;
+  @ViewChild('submitBtn')
+  subBtn!:ElementRef;
 
   constructor(
     private contactFormService: ContactFormService,
@@ -57,6 +59,11 @@ export class FormSectionComponent implements OnDestroy {
     return this.contactForm.get(input);
   }
 
+  private wiggleBtn(){
+    (<HTMLInputElement>this.subBtn.nativeElement).classList.add('wiggle');
+    setTimeout(()=>{(<HTMLInputElement>this.subBtn.nativeElement).classList.remove('wiggle')},200)
+  }
+
 
   onSubmit() {
     console.log(this.contactForm);
@@ -67,12 +74,14 @@ export class FormSectionComponent implements OnDestroy {
       console.log(
        this.getInput('email')?.hasError('email')
       );
+      this.wiggleBtn();
       return;
     }
 
     if (!(<HTMLInputElement>document.getElementById("checkbox")).checked) {
       this.error = 'Please accept Terms & Conditions ✅';
       console.log(this.error);
+      this.wiggleBtn();
       return;
     }
 

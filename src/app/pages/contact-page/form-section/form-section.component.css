@@ -178,3 +178,30 @@ position: relative;
       transform: rotate(360deg);
   }
   } 
+
+  .wiggle{
+    animation-name: wiggle-frames;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+  }
+  @keyframes wiggle-frames {
+    0%{
+      transform: rotateZ(0deg);
+    }
+    25%{
+      transform: rotateZ(3deg);
+    }
+    50%{
+      transform: rotateZ(-2deg);
+    }
+    75%{
+      transform: rotateZ(3deg);
+    }
+    90%{
+      transform: rotateZ(2deg);
+    }
+    100%{
+      transform: rotateZ(0deg);
+    
+    }
+  }
