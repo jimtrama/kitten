@@ -12,7 +12,7 @@ export class MapSectionComponent {
     center: { lat: 40.628871, lng: 22.945174 },
     zoom: 4,
   };
-  center = { lat: 40, lng: 22 }
+  center = { lat: 40.628871, lng: 22.945174 }
   constructor(){
     
   }

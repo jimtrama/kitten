@@ -6,10 +6,12 @@
   padding-right: 120px;
   padding-top: 150px;
 }
+
 .map-wrapper {
   max-width: 100%;
   min-width: 250px;
   border-radius: 13px;
+  overflow: visible;
 }
 
 .text-info{
@@ -24,6 +26,8 @@
         padding-right: 0px;
         padding-top: 0px;
         justify-content: flex-start;
-        width: 80% !important;
+        width: calc(100% - 50px) !important;
+        margin-left: 25px;
+        margin-right: 25px;
     }
   }

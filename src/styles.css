@@ -13,13 +13,14 @@
   font-family: mainFont;
   src: url(./../public/assets/fonts/manrope/main/Manrope-VariableFont_wght.ttf);
 }
-
+.map-container{
+  border-radius: 13px;
+}
 
 * {
   font-family: mainFont;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 h1 {
