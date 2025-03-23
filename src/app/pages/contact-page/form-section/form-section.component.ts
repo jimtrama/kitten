@@ -43,6 +43,8 @@ export class FormSectionComponent implements OnDestroy {
     });
     this.sub = this.contactFormService.emailSentSuccessfully.subscribe((ok)=>{
       this.loading = false;
+      this.contactForm.reset();
+      (<HTMLInputElement>document.getElementById("checkbox")).checked = false;
       if(ok){
         console.log("ok");
       }else{
@@ -95,8 +97,6 @@ export class FormSectionComponent implements OnDestroy {
     let city = this.getInput('city')?.value.trim();
     let message = this.getInput('message')?.value.trim();
     this.contactFormService.sendMail(name,city,postal_code,address,email,message);
-    this.contactForm.reset();
-    (<HTMLInputElement>document.getElementById("checkbox")).checked = false;
   }
 
   emailValidator(control: AbstractControl): any {
